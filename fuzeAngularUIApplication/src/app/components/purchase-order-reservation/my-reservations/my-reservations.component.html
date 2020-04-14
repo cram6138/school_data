@@ -1,0 +1,97 @@
+<div class="table-scroll">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+        <ng-container matColumnDef="containerCode">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Container Code </th>
+            <td mat-cell *matCellDef="let element"> {{element.containerCode}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="MROrderCode">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> MR Order Code </th>
+            <td mat-cell *matCellDef="let element"> {{element.MROrderCode}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="MRSource">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> MR Source </th>
+            <td mat-cell *matCellDef="let element"> {{element.MRSource}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="fuzeReservationId">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> fuze Reservation Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.fuzeReservationId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fuzeProjectId">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Fuze Project Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.fuzeProjectId}} </td>
+        </ng-container>
+        <ng-container matColumnDef="projectName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Project Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.projectName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="PSProject">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> PS Project </th>
+            <td mat-cell *matCellDef="let element"> {{element.PSProject}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pslc">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> PSLC </th>
+            <td mat-cell *matCellDef="let element"> {{element.pslc}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="reservedUsername">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Reserved By User </th>
+            <td mat-cell *matCellDef="let element"> {{element.reservedUsername}} </td>
+        </ng-container>
+        <ng-container matColumnDef="useByDate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Use By Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.useByDate}} </td>
+        </ng-container>
+        <ng-container matColumnDef="reservationCreationDate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Reservation Creation Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.reservationCreationDate}} </td>
+        </ng-container>
+        <ng-container matColumnDef="fuzeStatus">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Fuze Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.fuzeStatus}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="catsStatus">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Cats Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.catsStatus}} </td>
+        </ng-container>
+        <ng-container matColumnDef="territory">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Territory </th>
+            <td mat-cell *matCellDef="let element"> {{element.territory}} </td>
+        </ng-container>
+        <ng-container matColumnDef="market">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Market </th>
+            <td mat-cell *matCellDef="let element"> {{element.market}} </td>
+        </ng-container>
+        <ng-container matColumnDef="subMarket">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> SubMarket </th>
+            <td mat-cell *matCellDef="let element"> {{element.subMarket}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="localMarket">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Local Market </th>
+            <td mat-cell *matCellDef="let element"> {{element.localMarket}} </td>
+        </ng-container>
+        <ng-container matColumnDef="buyerId">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Buyer Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.buyerId}} </td>
+        </ng-container>
+        <ng-container matColumnDef="buyerName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Buyer Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.buyerName}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+</div>

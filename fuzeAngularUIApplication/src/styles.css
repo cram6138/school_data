@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-expansion-panel-header-title {
+    color: red;
+}
+
+.mat-expansion-panel {
+    background: rgb(247, 245, 245);
+}
+
+.mat-expansion-indicator::after {
+    color: red;
+}
+
+.mat-body p, .mat-body-1 p, .mat-typography p {
+    color: black;
+}
+
+.mat-expansion-panel-header:not([aria-disabled=true]) {
+    border-style: ridge;
+    border-width: thin;
+    border: #ff4619;
+}
+
+.mat-header-cell {
+    color: rgba(16, 16, 16, 0.7);
+}
+
+tr.mat-row, tr.mat-footer-row {
+    height: 48px;
+    background: rgb(236, 231, 231);
+}
+
+.mat-cell, .mat-footer-cell {
+    color: #121212;
+    /* border-right: 1px solid black; */
+}
+
+.mat-table thead, .mat-table tbody, .mat-table tfoot, mat-header-row, mat-row, mat-footer-row, [mat-header-row], [mat-row], [mat-footer-row], .mat-table-sticky {
+    background: rgb(145, 212, 144);
+}
+
+th.mat-header-cell {
+    font-weight: bold;
+    color: red;
+}
+
+.table-scroll {
+    overflow-x: scroll;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.mat-paginator, .mat-paginator-page-size .mat-select-trigger {
+    color: rgba(224, 31, 31, 0.7);
+    font-weight: bold;
+}
+.mat-select-value {
+    color:rgba(224, 31, 31, 0.7);
+    font-weight: bold;
+}
+
+.mat-select-arrow {
+    color: black
+}
+.mat-paginator-container {
+    background: rgb(145, 212, 144);
+}
+
+.mat-form-field-infix {
+    width: 270px !important;
+}
+
+.mat-toolbar {
+    background: #ece8e8;
+    color: #f31700;
+    font-size: medium;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: 40px !important;
+}
+
+.bg {
+    background-color: rgb(238, 240, 247);
+}
+
+.nav-menu {
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+input.mat-input-element {
+    color: green;
+    font-weight: 500;
+}
+
+.mat-select-panel {
+    background: #534e84;
+    margin-top: 37px;
+}

@@ -1,0 +1,50 @@
+
+.body-bg {
+  background-color: rgb(238, 240, 247);
+  width: 100%;
+  height: 100%;
+}
+.login-sec {
+  width: 30%;
+  margin-top: 100px;
+  margin-left: 450px;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+}
+
+.login-btn {
+  width: 90px;
+  margin-right: 10px;
+  background: lightseagreen;
+  font-size: large;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.mat-form-field {
+  width: 300px !important;
+  padding-top: 10px;
+}
+
+mat-card-title {
+    margin-top: 20px;
+    color: blue;
+    font-family: auto;
+    font-size: xx-large;
+    padding-bottom: 10px;
+}
+
+.mat-input-element::placeholder{
+  color:black;
+}
+
+/* .mat-form-field-appearance-legacy .mat-form-field-infix {
+  background: burlywood !important;
+} */
+.mat-card {
+  background: #0f0f0f;
+  color: #4f7ee2;
+}

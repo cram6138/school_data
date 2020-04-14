@@ -1,0 +1,37 @@
+<head>
+    <title>PO FUZE Ginger - Login</title>
+
+</head>
+
+<body>
+   
+    <mat-card class="login-sec">
+        <mat-card-title>Login</mat-card-title>
+        <div class="error-message">
+            <span>{{errorMsg}}</span>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="input-width">
+                <mat-form-field class="form-group">
+                    <mat-label>Username</mat-label>
+                    <input type="email" appAutofocus matInput formControlName="username" placeholder="Username"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                </mat-form-field>
+            </div>
+            <div class="input-width">
+                <mat-form-field class="form-group">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password" class="form-control"
+                        placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                </mat-form-field>
+            </div>
+
+            <div class="input-width">
+                <button [disabled]="loading" class="login-btn">
+                    Login
+                </button>
+                <!-- <button routerLink="/register" class="login-btn">Register</button> -->
+            </div>
+        </form>
+    </mat-card>
+</body>

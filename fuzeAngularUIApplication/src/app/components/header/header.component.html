@@ -1,0 +1,22 @@
+<!-- <mat-toolbar>
+    <span></span>
+  </mat-toolbar> -->
+
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span>FuzeGinger</span>
+        <span class="my-profile">
+            <a mat-button [matMenuTriggerFor]="aboveMenu">My Profile</a>
+            <mat-menu #aboveMenu="matMenu" yPosition="above">
+                <button mat-menu-item>Settings</button>
+                <button mat-menu-item>Help</button>
+                <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+        </span>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <a appHighlight class="nav-menu" (click)="home()">Home</a>
+        <a appHighlight class="nav-menu" (click)="purchaseOrder()">Purchase Order</a>
+        <a appHighlight class="nav-menu" (click)="poReservation()">Purchase Order Reservtion</a>
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,49 @@
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+
+@Component({
+  selector: 'app-container-search-reserve',
+  templateUrl: './container-search-reserve.component.html',
+  styleUrls: ['./container-search-reserve.component.css']
+})
+export class ContainerSearchReserveComponent implements OnInit, AfterViewInit {
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
+  dataSource: MatTableDataSource<any>;
+  data = [
+    {containerCode: 'reservedUsername', MROrderCode: 'Carbon', MRSource: 12.0107, fuzeReservationId: 'C',
+    fuzeProjectId: 'reservedUsername', projectName: 'Carbon', PSProject: 12.0107, pslc: 'C',
+    reservedUsername: 'reservedUsername', useByDate: 'Carbon', reservationCreationDate: 'reservationCreationDate', fuzeStatus: 'C',
+    catsStatus: 'catsStatus', territory: 'territory', market: 'market', subMarket: 'subMarket', localMarket: 'localMarket',
+    buyerId: 'buyerId', buyerName: 'buyerName'}
+  ];
+
+  foods = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
+  displayedColumns: string[] = ['containerCode', 'MROrderCode', 'MRSource', 'fuzeReservationId',
+          'fuzeProjectId', 'projectName', 'PSProject', 'pslc', 'reservedUsername',
+          'useByDate', 'reservationCreationDate', 'fuzeStatus', 'catsStatus', 'territory',
+          'market', 'subMarket', 'localMarket', 'buyerId', 'buyerName'];
+  constructor() {
+    this.dataSource = new MatTableDataSource<any>(this.data);
+    this.dataSource.paginator = this.paginator;
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+
+  ngOnInit(): void {
+  }
+
+}
+
+
